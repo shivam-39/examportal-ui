@@ -1,0 +1,14 @@
+img {
+    width: 30%;
+    margin-top: 20px;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.rc-btn {
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 80px;
+}

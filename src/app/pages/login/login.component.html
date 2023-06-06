@@ -1,0 +1,34 @@
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <mat-card>
+                    <div class="container text-center">
+                        <img src="../../assets/logo.png" alt="">
+                    </div>
+                    <h3 class="text-center">Login Here</h3>
+                    {{loginData | json}}
+                    <form (ngSubmit)="loginSubmit()">
+                        <!--username-->
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Username</mat-label>
+                            <input [(ngModel)]="loginData.username" name="username" matInput placeholder="Placeholder"
+                                required>
+                            <mat-hint>Username must be unique.</mat-hint>
+                        </mat-form-field>
+                        <!--password-->
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Password</mat-label>
+                            <input [(ngModel)]="loginData.password" name="password" type="password" matInput
+                                placeholder="Placeholder" required>
+                        </mat-form-field>
+                        <div class="container text-center">
+                            <button type="submit" class="rc-btn" mat-raised-button color="primary">Login</button>
+                            <button class="rc-btn" mat-raised-button color="accent">Clear</button>
+                        </div>
+                    </form>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>
