@@ -7,14 +7,14 @@ import { LoginService } from "./login.service";
 
 @Injectable()
 export class AuthInterceptor implements HttpInterceptor {
-    TOKEN_HEADER = "Authorization";
+    // private TOKEN_HEADER: string = "Authorization";
     constructor(private loginService: LoginService) { }
     intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
         // add jwt token (localStorage->LoginService)
         let authReq = req;
         const token = this.loginService.getToken();
         if (token != null) {
-            authReq = authReq.clone({ setHeaders: { "Authorization": `Bearer ${token}` } })
+            authReq = authReq.clone({ setHeaders: { Authorization: `Bearer ${token}` } })
         }
         return next.handle(authReq);
     }

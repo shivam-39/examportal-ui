@@ -13,8 +13,8 @@ export class LoginService {
 
     constructor(private http: HttpClient, private router: Router) { }
 
-    public generateToken(userData: any) {
-        return this.http.post(`${baseUrl}/generate-token`, userData);
+    public generateToken(loginData: any) {
+        return this.http.post(`${baseUrl}/generate-token`, loginData);
     }
 
     public getCurrentUser() {
@@ -47,11 +47,11 @@ export class LoginService {
     }
 
     public setUser(user: any) {
-        localStorage.setItem("User", JSON.stringify(user));
+        localStorage.setItem("user", JSON.stringify(user));
     }
 
     public getUser() {
-        let userStr = localStorage.getItem("User");
+        let userStr = localStorage.getItem("user");
         if (userStr != null) {
             return JSON.parse(userStr);
         } else {

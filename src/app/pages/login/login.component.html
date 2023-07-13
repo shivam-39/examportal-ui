@@ -7,7 +7,7 @@
                         <img src="../../assets/logo.png" alt="">
                     </div>
                     <h3 class="text-center">Login Here</h3>
-                    {{loginData | json}}
+                    <!-- {{loginData | json}} -->
                     <form (ngSubmit)="loginSubmit()">
                         <!--username-->
                         <mat-form-field class="full-width" appearance="outline">
@@ -24,7 +24,7 @@
                         </mat-form-field>
                         <div class="container text-center">
                             <button type="submit" class="rc-btn" mat-raised-button color="primary">Login</button>
-                            <button class="rc-btn" mat-raised-button color="accent">Clear</button>
+                            <button type="reset" class="rc-btn" mat-raised-button color="accent">Clear</button>
                         </div>
                     </form>
                 </mat-card>

@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
 
     loginSubmit(): void {
         console.log("login submitted");
-        if (this.loginData.username.trim() == "" || this.loginData.username.trim() == null) {
+        if (this.loginData.username.trim() == "" || this.loginData.username == null) {
             this.snack.open("Username is required.", "OK", {
                 duration: 3000
             });

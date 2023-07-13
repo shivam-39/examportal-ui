@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { UserService } from 'src/app/services/user.service';
-import swal from 'sweetalert2';
+import Swal from 'sweetalert2';
 
 @Component({
     selector: 'app-signup',
@@ -33,21 +33,21 @@ export class SignupComponent implements OnInit {
             // alert("Username is required !!");
             this._snack.open("Username is required.", "OK", {
                 duration: 3000
-            })
+            });
             return;
         }
         if (this.user.password == "" || this.user.password == null) {
             // alert("Username is required !!");
             this._snack.open("Password is required.", "OK", {
                 duration: 3000
-            })
+            });
             return;
         }
         if (this.user.email == "" || this.user.email == null) {
             // alert("Username is required !!");
             this._snack.open("Email is required.", "OK", {
                 duration: 3000
-            })
+            });
             return;
         }
 
@@ -56,12 +56,12 @@ export class SignupComponent implements OnInit {
                 //success
                 console.log(data);
                 // alert("success");
-                swal.fire("Success", "Thanks " + data.username, 'success');
+                Swal.fire("Success", "Thanks " + data.username, 'success');
             },
             (error) => {
                 //error
                 console.log(error);
-                alert("error");
+                this._snack.open(error.error, "OK");
             }
         )
     }
