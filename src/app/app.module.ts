@@ -21,7 +21,10 @@ import { MatIconModule } from '@angular/material/icon';
 import { authInterceptorProviders } from './services/auth.interceptor';
 import { DashboardComponent } from './pages/user/dashboard/dashboard.component';
 import { AdminDashboardComponent } from './pages/admin/admin-dashboard/admin-dashboard.component';
-
+import { ProfileComponent } from './pages/profile/profile.component';
+import { MatListModule } from '@angular/material/list';
+import { SidebarComponent } from './pages/admin/sidebar/sidebar.component';
+import { WelcomeComponent } from './pages/admin/welcome/welcome.component';
 
 @NgModule({
     declarations: [
@@ -33,6 +36,9 @@ import { AdminDashboardComponent } from './pages/admin/admin-dashboard/admin-das
         HomeComponent,
         DashboardComponent,
         AdminDashboardComponent,
+        ProfileComponent,
+        SidebarComponent,
+        WelcomeComponent,
     ],
     imports: [
         BrowserModule,
@@ -46,7 +52,8 @@ import { AdminDashboardComponent } from './pages/admin/admin-dashboard/admin-das
         MatSnackBarModule,
         MatCardModule,
         MatToolbarModule,
-        MatIconModule
+        MatIconModule,
+        MatListModule
     ],
     providers: [authInterceptorProviders],
     bootstrap: [AppComponent]
