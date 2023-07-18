@@ -25,6 +25,9 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { MatListModule } from '@angular/material/list';
 import { SidebarComponent } from './pages/admin/sidebar/sidebar.component';
 import { WelcomeComponent } from './pages/admin/welcome/welcome.component';
+import { ViewAllCategoryComponent } from './pages/admin/category/view-all-category/view-all-category.component';
+import { AddCategoryComponent } from './pages/admin/category/add-category/add-category.component';
+import { ViewAllQuizComponent } from './pages/admin/quiz/view-all-quiz/view-all-quiz.component';
 
 @NgModule({
     declarations: [
@@ -39,6 +42,9 @@ import { WelcomeComponent } from './pages/admin/welcome/welcome.component';
         ProfileComponent,
         SidebarComponent,
         WelcomeComponent,
+        ViewAllCategoryComponent,
+        AddCategoryComponent,
+        ViewAllQuizComponent,
     ],
     imports: [
         BrowserModule,
