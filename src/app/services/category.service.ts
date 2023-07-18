@@ -14,6 +14,6 @@ export class CategoryService {
     }
 
     public addCategory(category: any) {
-        return this._http.post(`${baseUrl}/category`, category);
+        return this._http.post(`${baseUrl}/category/`, category);
     }
 }

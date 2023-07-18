@@ -1,0 +1,12 @@
+.header-image {
+    background-image: url("../../../../../assets/exam.png");
+    background-size: cover;
+}
+
+.ml40 {
+    margin-left: 40px;
+}
+
+.mr40 {
+    margin-right: 40px;
+}

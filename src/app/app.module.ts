@@ -28,6 +28,9 @@ import { WelcomeComponent } from './pages/admin/welcome/welcome.component';
 import { ViewAllCategoryComponent } from './pages/admin/category/view-all-category/view-all-category.component';
 import { AddCategoryComponent } from './pages/admin/category/add-category/add-category.component';
 import { ViewAllQuizComponent } from './pages/admin/quiz/view-all-quiz/view-all-quiz.component';
+import { AddQuizComponent } from './pages/admin/quiz/add-quiz/add-quiz.component';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
     declarations: [
@@ -45,6 +48,7 @@ import { ViewAllQuizComponent } from './pages/admin/quiz/view-all-quiz/view-all-
         ViewAllCategoryComponent,
         AddCategoryComponent,
         ViewAllQuizComponent,
+        AddQuizComponent,
     ],
     imports: [
         BrowserModule,
@@ -59,7 +63,9 @@ import { ViewAllQuizComponent } from './pages/admin/quiz/view-all-quiz/view-all-
         MatCardModule,
         MatToolbarModule,
         MatIconModule,
-        MatListModule
+        MatListModule,
+        MatSlideToggleModule,
+        MatSelectModule
     ],
     providers: [authInterceptorProviders],
     bootstrap: [AppComponent]
