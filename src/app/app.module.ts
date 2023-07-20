@@ -31,6 +31,8 @@ import { ViewAllQuizComponent } from './pages/admin/quiz/view-all-quiz/view-all-
 import { AddQuizComponent } from './pages/admin/quiz/add-quiz/add-quiz.component';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatSelectModule } from '@angular/material/select';
+import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dialog.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
     declarations: [
@@ -49,6 +51,7 @@ import { MatSelectModule } from '@angular/material/select';
         AddCategoryComponent,
         ViewAllQuizComponent,
         AddQuizComponent,
+        ConfirmDialogComponent,
     ],
     imports: [
         BrowserModule,
@@ -65,7 +68,8 @@ import { MatSelectModule } from '@angular/material/select';
         MatIconModule,
         MatListModule,
         MatSlideToggleModule,
-        MatSelectModule
+        MatSelectModule,
+        MatDialogModule
     ],
     providers: [authInterceptorProviders],
     bootstrap: [AppComponent]

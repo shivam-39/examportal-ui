@@ -1,19 +1,32 @@
 <mat-card class="mt10 mr10" *ngFor="let q of quizList">
-    <mat-card-header>
-        <div mat-card-avatar class="header-image"></div>
-        <mat-card-title>{{q.title}}</mat-card-title>
-        <mat-card-subtitle>{{q.category.title}}</mat-card-subtitle>
-    </mat-card-header>
-    <mat-card-content class="ml40 mr40">
-        <p>{{q.description}}</p>
-        <mat-card-actions>
-            <button mat-flat-button color="primary">All Questions</button>
-            <button mat-stroked-button color="primary" class="ml40">Max Marks: {{q.maxMarks}}</button>
-            <button mat-stroked-button color="primary" class="ml40">Questions to show: {{q.numberOfQues}}</button>
-            <button mat-stroked-button color="primary" class="ml40">Attempts</button>
-            <button mat-stroked-button color="primary" class="ml40">Update</button>
-        </mat-card-actions>
-    </mat-card-content>
+    <!-- <div class="container"> -->
+    <div class="row">
+        <div class="col-md-10">
+            <mat-card-header>
+                <div mat-card-avatar class="header-image"></div>
+                <mat-card-title>{{q.title}}</mat-card-title>
+                <mat-card-subtitle>{{q.category.title}}</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content class="ml20 mr20">
+                <p>{{q.description}}</p>
+                <mat-card-actions>
+                    <button mat-flat-button color="primary">All Questions</button>
+                    <button mat-stroked-button color="primary" class="ml20 mt10">Max Marks: {{q.maxMarks}}</button>
+                    <button mat-stroked-button color="primary" class="ml20 mt10">Questions to show:
+                        {{q.numberOfQues}}</button>
+                    <button mat-stroked-button color="primary" class="ml20 mt10">Attempts</button>
+                </mat-card-actions>
+            </mat-card-content>
+        </div>
+        <div class="col-md-2" align="end">
+            <button mat-fab color="primary" aria-label="Edit Quiz" class="mr20 mb10">
+                <mat-icon>edit</mat-icon>
+            </button>
+            <button mat-fab color="primary" aria-label="Delete Quiz" class="mr20" (click)="deleteQuiz(q.qid)">
+                <mat-icon>delete</mat-icon>
+            </button>
+        </div>
+    </div>
 </mat-card>
 <div class="container text-center mt20 mb20">
     <button mat-raised-button color="primary" routerLink="/admin-dashboard/add-quiz">Add New Quiz</button>
