@@ -43,7 +43,12 @@ export class AddQuizComponent implements OnInit {
     public addQuiz(): void {
         console.log("add Quiz Submit");
         console.log(this.quizData);
-        if (this.quizData.title.trim() == "" || this.quizData.description.trim() == "" || this.quizData.maxMarks.trim() == "" || this.quizData.numberOfQues.trim() == "" || this.quizData.category.cid == null) {
+        if (this.quizData.title.trim() == ""
+            || this.quizData.description.trim() == ""
+            || this.quizData.maxMarks.trim() == ""
+            || this.quizData.numberOfQues.trim() == ""
+            || this.quizData.category.cid == null
+        ) {
             return;
         }
         this.quizService.addQuiz(this.quizData).subscribe(
