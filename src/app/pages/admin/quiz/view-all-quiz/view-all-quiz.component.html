@@ -21,11 +21,11 @@
             </mat-card-content>
         </div>
         <div class="col-md-2" align="end">
-            <button mat-fab color="primary" aria-label="Edit Quiz" class="mr20 mb10"
+            <button mat-fab color="accent" aria-label="Edit Quiz" class="mr20 mb10"
                 [routerLink]="'/admin-dashboard/update-quiz/' + q.qid">
                 <mat-icon>edit</mat-icon>
             </button>
-            <button mat-fab color="primary" aria-label="Delete Quiz" class="mr20" (click)="deleteQuiz(q.qid)">
+            <button mat-fab color="warn" aria-label="Delete Quiz" class="mr20" (click)="deleteQuiz(q.qid)">
                 <mat-icon>delete</mat-icon>
             </button>
         </div>

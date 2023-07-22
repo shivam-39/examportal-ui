@@ -13,6 +13,9 @@ import { ViewAllCategoryComponent } from './pages/admin/category/view-all-catego
 import { AddCategoryComponent } from './pages/admin/category/add-category/add-category.component';
 import { ViewAllQuizComponent } from './pages/admin/quiz/view-all-quiz/view-all-quiz.component';
 import { AddQuizComponent } from './pages/admin/quiz/add-quiz/add-quiz.component';
+import { UpdateQuizComponent } from './pages/admin/quiz/update-quiz/update-quiz.component';
+import { ViewQuizQuestionsComponent } from './pages/admin/question/view-quiz-questions/view-quiz-questions.component';
+import { AddQuestionComponent } from './pages/admin/question/add-question/add-question.component';
 
 const routes: Routes = [
     {
@@ -59,6 +62,18 @@ const routes: Routes = [
             {
                 path: 'add-quiz',
                 component: AddQuizComponent
+            },
+            {
+                path: 'update-quiz/:qid',
+                component: UpdateQuizComponent
+            },
+            {
+                path: 'view-quiz-questoins/:qid/:title',
+                component: ViewQuizQuestionsComponent
+            },
+            {
+                path: 'add-question/:qid',
+                component: AddQuestionComponent
             }
         ]
     },

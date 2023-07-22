@@ -1,0 +1,52 @@
+<div class="bootstrap-wrapper">
+    <div class="row">
+        <div class="col-md-12">
+            <mat-card>
+                <mat-card-title>
+                    <h1>Questions: {{quizTitle}}</h1>
+                    <div class="container text-center">
+                        <button mat-raised-button color="primary" aria-label="Add Question"
+                            [routerLink]="'/admin-dashboard/add-question/' + quizId">
+                            <mat-icon>add</mat-icon>
+                        </button>
+                    </div>
+                </mat-card-title>
+                <mat-card-content>
+                    <mat-card *ngFor="let question of questionList; let i = index" class="mb10">
+                        <mat-card-content>
+                            <p> <b>Q.{{i+1}}</b><span class="ml20" [innerHTML]="question.content"></span></p>
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <p><em class="mr20">a)</em>{{question.option1}}</p>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p><em class="mr20">b)</em>{{question.option2}} </p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <p><em class="mr20">c)</em>{{question.option3}} </p>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p><em class="mr20">d)</em>{{question.option4}} </p>
+                                    </div>
+                                </div>
+                                <mat-divider></mat-divider>
+                                <p class="mt10"><b class="mr10">Correct Answer:</b>{{question.answer}}</p>
+                            </div>
+                        </mat-card-content>
+                        <mat-card-actions>
+                            <button mat-stroked-button color="accent" aria-label="Edit Question">
+                                <mat-icon>edit</mat-icon>
+                            </button>
+                            <button mat-stroked-button color="warn" aria-label="Delete Question"
+                                (click)="deleteQuestion(question.quesId)">
+                                <mat-icon>delete</mat-icon></button>
+                        </mat-card-actions>
+                    </mat-card>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+</div>

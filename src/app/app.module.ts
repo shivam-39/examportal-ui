@@ -33,6 +33,10 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatSelectModule } from '@angular/material/select';
 import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { UpdateQuizComponent } from './pages/admin/quiz/update-quiz/update-quiz.component';
+import { ViewQuizQuestionsComponent } from './pages/admin/question/view-quiz-questions/view-quiz-questions.component';
+import { AddQuestionComponent } from './pages/admin/question/add-question/add-question.component';
+import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 
 @NgModule({
     declarations: [
@@ -52,6 +56,9 @@ import { MatDialogModule } from '@angular/material/dialog';
         ViewAllQuizComponent,
         AddQuizComponent,
         ConfirmDialogComponent,
+        UpdateQuizComponent,
+        ViewQuizQuestionsComponent,
+        AddQuestionComponent,
     ],
     imports: [
         BrowserModule,
@@ -69,7 +76,8 @@ import { MatDialogModule } from '@angular/material/dialog';
         MatListModule,
         MatSlideToggleModule,
         MatSelectModule,
-        MatDialogModule
+        MatDialogModule,
+        CKEditorModule
     ],
     providers: [authInterceptorProviders],
     bootstrap: [AppComponent]
