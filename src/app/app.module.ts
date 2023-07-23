@@ -37,6 +37,9 @@ import { UpdateQuizComponent } from './pages/admin/quiz/update-quiz/update-quiz.
 import { ViewQuizQuestionsComponent } from './pages/admin/question/view-quiz-questions/view-quiz-questions.component';
 import { AddQuestionComponent } from './pages/admin/question/add-question/add-question.component';
 import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
+import { SidebarComponent as UserSidebarComponent } from './pages/user/sidebar/sidebar.component';
+import { LoadQuizComponent } from './pages/user/load-quiz/load-quiz.component';
+import { UserHomeComponent } from './pages/user/user-home/user-home.component';
 
 @NgModule({
     declarations: [
@@ -59,6 +62,9 @@ import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
         UpdateQuizComponent,
         ViewQuizQuestionsComponent,
         AddQuestionComponent,
+        UserSidebarComponent,
+        LoadQuizComponent,
+        UserHomeComponent
     ],
     imports: [
         BrowserModule,
