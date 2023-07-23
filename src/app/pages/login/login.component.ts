@@ -60,11 +60,14 @@ export class LoginComponent implements OnInit {
                         }
                     },
                     (error) => {
+                        console.log(error);
+                        this.snack.open("Error getting user data", "OK", {
+                            duration: 3000
+                        });
                     }
                 )
             },
             (error) => {
-                console.log("error");
                 console.log(error);
                 this.snack.open("Invalid details.", "OK", {
                     duration: 3000

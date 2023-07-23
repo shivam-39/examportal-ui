@@ -1,0 +1,46 @@
+<div class="bootstrap-wrapper">
+    <div class="container-float">
+        <div class="row">
+            <div class="col-md-12">
+                <mat-card class="mt20">
+                    <mat-card-header>
+                        <mat-card-title>Important Instructions</mat-card-title>
+                        <mat-card-subtitle>One more step to go</mat-card-subtitle>
+                    </mat-card-header>
+                    <mat-card-content class="ml20">
+                        <h1>{{quizData.title}}</h1>
+                        <p>{{quizData.description}}</p>
+                        <mat-divider></mat-divider>
+                        <br>
+                        <h3>Read the following instructions carefully!</h3>
+                        <ul>
+                            <li>This is a practice quiz.</li>
+                            <li>All questions are MCQ Type.</li>
+                            <li>There are <b>{{quizData.numberOfQues}} Questions</b> in this quiz</li>
+                            <li>Time for quiz is: <b>{{quizData.numberOfQues*2}} minutes.</b></li>
+                            <li>This Quiz can be attempted only once.</li>
+                            <li>There is not negative marking</li>
+                            <li>Maximum marks for this quiz is: <b>{{quizData.maxMarks}}</b></li>
+                        </ul>
+                        <mat-divider></mat-divider>
+                        <br>
+                        <h3>Attempting Quiz</h3>
+                        <ul>
+                            <li>Click <b>Start Quiz</b> button to start the quiz.</li>
+                            <li>The time will start the moment you click the Start Quiz button.</li>
+                            <li>The quiz cannot be resumed if interrupted for any reasons.</li>
+                            <li>Scroll down to move to next question.</li>
+                            <li>Click on <b>Submit Test</b> button on completion of the quiz.</li>
+                            <li>The quiz will automatically get submitted when time ends</li>
+                            <li>A Pdf report of the quiz is automatically generated</li>
+                        </ul>
+                        <mat-divider></mat-divider>
+                    </mat-card-content>
+                    <mat-card-actions class="text-center">
+                        <button mat-raised-button color="primary" class="mb20" (click)="startQuiz()">START QUIZ</button>
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>

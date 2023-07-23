@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
     title = 'examportal-ui';
+
+    public getBlurInput(): Number {
+        return 10;
+    }
 }
